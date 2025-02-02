@@ -1,0 +1,66 @@
+<!-- CREATE A BUSINESS NAME GENERATOR BY COMBINING THE LIST OF ADJECTIVES :
+ADJECTIVES:
+CRAZY
+AMAZING 
+FIRE
+
+SHOP NAME:
+ENGINE
+FOOD
+GARMENTS
+
+ANOTHER WORD:
+BRO'S
+LIMITED
+HUB
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let rand=math.random()
+        let first,second,third;
+        // 0  0.33  0.66  1
+        // lets generate the first word
+        if(rand<0.33){
+            first="crazy"
+        }
+        else if(rand<0.66 && rand>=0.33){
+            first="amazing"
+        }
+        else{
+            first="fire"
+        }
+ // lets generate the second word
+  rand=math.random()
+
+        if(rand<0.33){
+            first="engine"
+        }
+        else if(rand<0.66 && rand>=0.33){
+            first="food"
+        }
+        else{
+            first="garments"
+        }
+        // lets generate third word
+         rand=math.random()
+
+        if(rand<0.33){
+            first="bro's"
+        }
+        else if(rand<0.66 && rand>=0.33){
+            first="limited"
+        }
+        else{
+            first="hub"
+        }
+        console.log(`${first} ${second}  ${third}`)
+    </script>
+</body>
+</html>
