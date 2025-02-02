@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM:- DOCUMENT OBJECT MODEL:-
+    DOM REPRESENT THE PAGE CONTENT AS HTML
+    DOCUMENT.BODY->PAGE BODY AS JS OBJECT
+    DOCUMENT.BODY.STYLE.BACKGROUND="GREEN"
+    
+    BOM:- BROWSE OBJECT MODEL:
+    REPRESENTS THE ADDITIONAL  OBJECTS PROVIDED BY THE BROWSER(HOST ENVIROMENT) FOR WORKING WITH EVERYTHING EXCEPT THE DOCUMENT.
+
+    INTERACTION:- ALERT,PROMPT,CONFIRM
+    1. ALERT:- USED TO INVOKE A MINI WINDOW WITH A MESSAGE ALERT.
+    alert("hello")
+    2. PROMPT:- USED TO TAKE USER INPUT AS STRING.
+    inp=prompt("hi","no")
+    3.CONFIRM:- SHOWS A MESSAGE AND WAITS FOR THE USER TO PRESS OK OR CANCEL.RETURNS TRUE FOR OK AND FALSE FOR CANCEL.    
+    -->
+    <div class="container">
+        <div class="box">
+            this is a box
+        </div>
+    </div>
+    <script>
+        document.title="you are best"
+        console.log(document.title)
+        console.log(document.body)
+        document.body.style.background="green";
+    </script>
+</body>
+</html>
