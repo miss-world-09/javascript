@@ -1,23 +1,53 @@
-// LOOPS:-
-// 1. FOR EACH LOOP:- WE CAN ACCESS EACH AND EVERY ELEMENT.
-// let arr=[1,3,2,6,7,3];
-// arr.forEach((value,index)=> {
-//     console.log("number",value,"index",index);
-// });
-// TRADITIONAL LOOP
-// for(let value of arr){
-//     console.log(value);
+// HOISTING:- 1. VARIABLE DECLARATION, 2.FUNCTION DECLARATION.
+
+// 1.FUNCTION HOISTING:- SHIFT TO THE TOP OF THE SCOPE.
+
+// saymyname("riya");
+
+// function saymyname(finalname){
+//     console.log(finalname);
 // }
 
-// ARRAY WITH FUNCTION:
-let arr=[1,3,5,7,3];
-function getsum(arr){
-    let sum=0;
-    arr.forEach((value)=> {
-        sum=sum+value;
-    });
-    return sum;
-}
-let totalsum=getsum(arr);
-console.log(totalsum);
+// 2. VARIABLE HOISTING:- ONLY USES VAR KEYWORD.
+// console.log(age);
+// var age=12;
 
+// FUNCTION CALL:
+// function greetme(greet,fullname){
+//     console.log("hello",fullname);
+// }
+// function greet(){
+//     console.log("greeting of the day");
+// }
+// greetme(greet,"jiya");
+// greet();
+
+
+
+// function solve(number){
+//     return function(number){
+//         return number*number;
+//     }
+// }
+//  let ans = solve(5);
+// console.log(ans(5));
+
+
+const arr=[
+    function(a,b){
+        return a+b;
+    },
+    function(a,b){
+        return a-b;
+    },
+    function(a,b){
+        return a*b;
+    },
+    function(a,b){
+        return a/b;
+    }
+];
+
+let first=arr[2];
+let ans=first(5,6);
+console.log(ans);
