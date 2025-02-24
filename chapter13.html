@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            display: flex;
+            padding: 8px;
+            height: 140px;
+            border-radius: 4px;
+        }
+        .title{
+            font-size: 25px;
+            font-weight: 600;
+            margin: 6px;
+            color: white;
+        }
+        .img>img {
+            border-radius: 10px;
+        }
+        .duration{
+            background-color: black;
+            border-radius: 5px;
+            padding: 2px;
+            color: white;
+            position: absolute;
+            top: 84px;
+            left: 140px;
+            opacity: 0.8;
+        }
+        .card{
+            color: gray;
+            font-size: 15px;
+            margin: 6px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img class="image" src="" alt="">
+            <div class="duration"></div>
+        </div>
+        <div class="head">
+            <div class="title"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+   <script src="script.js"></script>
+
+function card(title, cname, views, yearold, duration, thumbnail) {
+    document.querySelector(".title").innerHTML = title;
+    document.querySelector(".duration").innerHTML =duration;
+    if(views >= 1000000) views = views / 1000000 + "M";
+    else if(views >= 1000) views = views / 1000 + "K";
+    document.querySelector(".card").innerHTML =cname +" . " + views +" views . "+ yearold +" year ogo .";
+    document.querySelector(".image").src = thumbnail;
+   
+}
+
+card("Introduction to Backend | Sigma Web Dev video #2", "CodeWithHarry", 
+    "7600000", "2", "31:12", "https://i.ytimg.com/vi/CO_DAXswOrc/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLB6ouPFLR2i6ngfU4nkqcHSdWgLiQ"
+)
+
+
+</body>
+</html>

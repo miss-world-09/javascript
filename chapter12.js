@@ -41,7 +41,7 @@ class human{
     }
 }
 
-let obj=new human(50,200e);
+let obj=new human(50,200);
 // console.log(obj.#wt);
 obj.walking();
 //Getter and setter:- getter is used to get the value of the function.
