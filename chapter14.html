@@ -1,0 +1,79 @@
+<!-- /* JAVASCRIPT IN BROWSER
+1. DEVELOPER TOOLS:- ELEMENTS=ALL HTML ELEMENTS
+CONSOLE=AL  THE ERRORS +LOGS
+NETWORK=ALL NETWORK REQUEST
+
+2. SCRIPT TAGR-> USD TO INSERT JAVASCRIPT.
+
+3. CONSOLE OBJECT METHODS:-
+assert()-> used to assert the consition
+clear()->clear the console
+log()->output the message
+table()->display the tabular data
+warn()->used to warn
+error()->used for error
+info()->used for special information
+
+4. INTERACTION:alert,prompt,confirm
+alert->used to invoke mini window with a message.
+ex:- alert("hello")
+prompt->used to take user input as a string
+ex:- prompt("hi","no")
+confirm->shows a message and waits for the user to press or cancel. Return true for ok and false for no.
+
+5. Windows Object:- BOM AND DOM
+DOCUMENT OBJECT MODEL(DOM):- REPRESENTS PAGE CONTENT AS HTML.
+document.body -> PAGE BODY AS JS OBJECT
+document.body.style.background="red"  -> changes page background to red
+
+BROWSER OBJECT MODEL(BOM):- REPRESENTS THE ADDITIONAL OBJECTS PROVIDED BY THE BROWSER(HOST ENVIROMENT ) WITH WORKING WITH EVERYTHING EXCEPT DOCUMENT.
+THE FUNCTION ALERT,PROMPT,CONFIRM CAN ALSO USED AS BOM
+EX:- location href="www.google.com"
+*/
+
+// WAP USING PROMPT FUNCTION TO TAKE INPUT OF AGE AS A VLUE FROM THE USER AND ALERT TO TELL HIM IF HE CAN DRIVE OR NOT. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Driving Check</title>
+    <body>
+        <p>hi</p>
+    </body>
+    <script>
+        function driving() { 
+            let age = prompt("Enter your age"); 
+            age = Number(age); 
+            if (age >= 18) { 
+                alert("You can drive 🚗"); 
+            } 
+            else if(age<0){
+                console.error("not possible");
+            }
+            else { 
+                alert("You are underage 🚫"); 
+            } 
+        } 
+        function q2(){ 
+            let yes;
+            let no;
+        prompt("Do you want to see prompt again?");
+        if(yes){
+            alert("Here it is");
+        }
+        else{
+            alert("ok");
+        }
+    }
+        driving(); // Run function when page loads
+        q2();
+        document.body.style.background="red";
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<!--   -->
+
