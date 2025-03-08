@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>event bubbling</title>
+        <style>
+            /* .container (Outer container)
+           .childcontainer (Middle container)
+           .child (Inner container) */
+            .child{
+                background-color: aliceblue;
+                border: 2px solid black;
+                padding: 14px;
+                margin: 14px;
+                cursor: pointer;
+            }
+            .childcontainer{
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+            }
+            .container{
+                background-color: rgb(255, 0, 0); 
+                padding: 14px;
+                margin: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <section class="childcontainer">
+                <div class="child">
+                    I am a child
+                </div>
+
+            </section>
+        </div>
+        <script>
+            document.querySelector(".child").addEventListener("click",(e)=>{
+                e.stopPropagation()
+                alert("child container was clicked")
+            })
+            document.querySelector(".childcontainer").addEventListener("click",(e)=>{
+                e.stopPropagation()
+                alert("child container was clicked")
+            })
+            document.querySelector(".container").addEventListener("click",(e)=>{
+                e.stopPropagation()
+                alert(" container was clicked")
+            })
+//             Event bubbling: If you click on .child, the event will "bubble up" and also trigger .childcontainer and .container click events.
+// e.stopPropagation(): Stops the event from bubbling further.
+
+            function getRandomColor(){
+                let val1=Math.ceil(0+Math.random()*255);
+                let val2=Math.ceil(0+Math.random()*255);
+                let val3=Math.ceil(0+Math.random()*255);
+                return `rgb(${val1}, ${val2}, ${val3})`
+            }
+//             Math.random() generates random decimal values.
+//  Math.ceil() rounds them up to ensure a valid RGB color range (1-255).
+//  The function returns a string in the "rgb(R, G, B)" format, which is directly usable in CSS.
+            
+            let b = setInterval(() => {
+             document.querySelector(".childcontainer").style.background = getRandomColor();
+             }, 1000);
+        //      Changes the background color of .childcontainer every 1 second
+        // console.log(b)
+        
+            let a = setTimeout(() => {
+            document.querySelector(".childcontainer").style.background = getRandomColor();
+        }, 5000);
+
+        console.log(a)
+
+        </script>
+    </body>
+</html>
