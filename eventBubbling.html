@@ -36,6 +36,7 @@
 
             </section>
         </div>
+        
         <script>
             document.querySelector(".child").addEventListener("click",(e)=>{
                 e.stopPropagation()
@@ -67,7 +68,7 @@
              }, 1000);
         //      Changes the background color of .childcontainer every 1 second
         // console.log(b)
-        
+
             let a = setTimeout(() => {
             document.querySelector(".childcontainer").style.background = getRandomColor();
         }, 5000);
