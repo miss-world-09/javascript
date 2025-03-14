@@ -45,5 +45,30 @@ EX:- */
 
 //  HANDLING ERROR:- WE CAN HANDLE CALLBACK ERRORS BY SUPPLYING ERROR ARGUMENT LIKE:
 function loadScript(src,callback){
-    
+    script.onload=()=>callback(null,script);
+    script.onerror=()=>callback(new Error('failed'));
 }
+
+/* INTRODUCTION TO PROMISES
+// A Promise in JavaScript ek object hota hai jo asynchronous operation ka result represent karta hai. Yeh future mein complete hone wale asynchronous task ka success ya failure ko handle karne ka tareeka provide karta hai.
+ Promise ke 3 Possible States
+ Pending → Jab promise banaya jata hai, lekin abhi complete nahi hua hai.
+ Fulfilled → Jab asynchronous task successfully complete ho jata hai.
+ Rejected → Jab asynchronous task fail ho jata hai.
+
+ SYNTAX FOR PROMISE:  */
+ let promise=new promise((reject,resolve)=>{
+    if(success){
+        resolve("task compleetd successfully")
+    }
+    else{
+        reject("task failed")
+    }
+ })
+
+/* RESOLVE AND REJECT ARE THE TWO CALLBACKS PROVIDED BY JS. THEY ARE CALLED LIKE:
+resolve(value)->if the job is finished successfully
+reject(errror)->if the job fails
+THE PROMISE OBJECT RETURNED BY THE NEW PROMISE CONSTRUCTOR HAS THESE PROPERTIES:
+1. state:Initially pending and then changes to either "fulfilled" when the resolve is called or "rejected" when reject is called.
+2. result: Initially undefined and then changes to value if resolved or error when rejected.*/
