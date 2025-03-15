@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+          width: 60vw;
+          height: 50vh;
+          background-color: green;
+          color: white;
+        }
+  
+        .loading span {
+          width: 5px;
+          height: 5px;
+          margin: 0 5px;
+          background-color: white;
+          border-radius: 50%;
+          display: inline-block;
+          animation: loading 1s infinite ease-in-out;
+        }
+  
+        .loading span:nth-child(2) {
+          animation-delay: 0.1s;
+        }
+  
+        @keyframes loading {
+          50% {
+            opacity: 0;
+            transform: scale(0.3) translateY(5px);
+          }
+        }
+      </style>
+      <!--
+      The loading function mentioned in your CSS is actually not a JavaScript function — it's a CSS animation created using the @keyframes rule
+      @keyframes loading
+
+This defines the keyframes for the animation called loading.
+50% { ... }
+
+At the halfway point (50% of the animation duration), each dot:
+Becomes invisible with opacity: 0.
+Shrinks to 30% of its original size using scale(0.3).
+Moves 5px downward using translateY(5px).
+Animation Applied in .loading span
+
+In .loading span, the animation property applies this loading effect:
+       .container ke andar .loading aur 3 <span> dots add kiye.
+        Dots ka size bada kiya (5px → 10px).
+Har dot ka animation thoda delay ke saath start hota hai taaki wave-like effect mile.
+Har dot pehle visible hota hai, fir chhota ho kar invisible ho jata hai (opacity: 0) aur fir wapas aata hai.
+ -->
+</head>
+<body>
+    <div class="container"></div>
+
+    <script src="exercise2.js"></script>
+</body>
+</html>
