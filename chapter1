@@ -13,13 +13,24 @@
 // 2. VAR CAN BE UPDATED AND RE-DECLARED WITHIN THE SCOPE.
 // 3. COST AND LET CAN NEITHER BE UPDATED NOR RE-DECLARED.
 // PRIMITIVE DATA TYPES:- SET OF BASIC DATA TYPES IN JS. THERE ARE 7 PRIMITIVE DATA TYPES:-
-// NULL,NUMBER,STRING,SYMBOL,UNDEFINED,BOOLEAN,BIG INT
+// NULL,NUMBER,STRING,SYMBOL,UNDEFINED,BOOLEAN,BIG INT.
+// NULL MEANS IT IS EMPTY, NOTHING IS INSIDE IT. WHEREAS UNDEFINED STANDS FOR NOT DEFINED MAY BE IT IS DEFINED IN FUTURE.
 // OBJECT:- 
 const item={
     name:"led bulb",
     price:"150"
 }
 // name and price are key whereas led bulb and 150 are values
+
+/* let gameName="spiderman";
+gameName="batsman";
+console.log(gameName);
+output: batsman (variable can be changed)
+
+const userName="riya";
+userName="rama"
+conlose.log(userName);
+OUTPUT:- ERROR (because const can't be changes)*/
 
 // Q1:- CREATE A VARIBLE OF TYPE STRING AND TRY TO ADD A NUMBER IN IT.
 // let string="10";
