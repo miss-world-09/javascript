@@ -49,5 +49,22 @@ const Obj = {
     age: 30
 };
 
+/* NON-PRIMITIVE DATA TYPES:- WE HAVE MAKE THE OBJECTSAND THIS IS HOW IT CAN BE ACCESSED.
+
+const username={
+    firstname:"mr h",
+    isloggedin:"true",
+    isdrunk:"true",
+    
+};
+username.lastname="sharma";
+console.log(username.firstname);
+console.log(username.lastname);
+console.log(username.isdrunk);
+console.log(typeof username);
+
+let today=new Date();
+console.log(today);
 
 
+*/
