@@ -9,3 +9,5 @@ for(i=0;i<=tea.length;i++){
     selectedtea.push(tea[i]);
 }
 console.log(selectedtea);
+
+
