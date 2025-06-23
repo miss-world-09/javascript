@@ -12,7 +12,7 @@ BOM is about browser features
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    alert("connected");
+    // alert("connected");
 
     // Your other DOM-manipulating code here
 });
@@ -49,3 +49,31 @@ document.getElementById("addNewItem")
     newItem.textContent="Eggs";
     document.getElementById("shoppingList").appendChild(newItem);
 })
+
+document.getElementById("clickMeButton")
+.addEventListener("dblclick",function(){
+alert("db click is working");
+})
+
+document.getElementById("teaList")
+.addEventListener("click",function(event){
+if(event.target&& event.target.matches(".teaItem")){
+    alert("you selected"+event.target.textContent);
+}
+});
+
+document.getElementById("feedbackForm")
+.addEventListener("submit",function(event){
+    event.preventDefault();
+    let feedback=document.getElementById("feedbackInput").value;
+    console.log(feedback);
+    document.getElementById(
+        "feedbackDisplay"
+    ).textContent=`feedback is ${feedback}`;
+
+});
+
+document.addEventListener("domContentLoaded",function()
+{
+    document.getElementById("domStatus").textContent="dom fully loaded";
+});
