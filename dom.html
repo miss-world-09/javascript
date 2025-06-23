@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+
+    <style>
+        body{
+            background-color: beige;
+            color: rgb(14, 13, 13);
+            text-align: center;
+        }
+        .highlight{
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <script src="dom.js"></script> -->
+
+    <h1>Js DOM</h1>
+<section id="example-name">
+    <h2>accessing dom elements</h2>
+    <p id="myParagraph">
+        this is my paragraph
+    </p>
+    <button id="changetextbutton">
+        this is paragraph click here to change the button.
+    </button>
+</section>    
+<section id="example2">
+
+<!-- traversing the dom -->
+<h2> traversing the dom</h2>
+<ul id="citiesList">
+    <li >new york</li>
+    <li>paris</li>
+    <li>
+        tokyo
+    </li>
+    <li>london</li>
+</ul>
+<button id="highlightfirstcity">
+    highlight first city
+</button>
+ </section> 
+
+<!-- Manipulating DOMS elements  -->
+<section id="example-3">
+    <h2>Manipulating DOMS elements</h2>
+    <div id="coffeeOrder">Order:<span id="coffeeType">
+latte
+    </span></div>
+<button id="changeOrder">change Order to expresso</button>
+</section>
+
+<!-- creating and inserting elements -->
+ <section id="example-4">
+    <h2>creating and inserting elements</h2>
+    <button id="addNewItem">add new item to the shopping list</button>
+    <ul id="shoppingList">
+        <li>
+            bread
+        </li>
+        <li>milk</li>
+    </ul>
+ </section>
+    <script src="dom.js"></script>
+
+</body>
+</html>
