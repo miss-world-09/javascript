@@ -89,4 +89,45 @@ EXAMPLE:document.addEventListener("keydown", function(event) {
     console.log("Ctrl:", event.ctrlKey);
     console.log("Shift:", event.shiftKey);
 });
+
+
+1.EVENT BUBBLING:- When an event happens on a child element, it "bubbles up" to its parent, then to the grandparent, and so on — all the way up to the <body>.
+EXAMPLE:-
+<div id="box">
+  <button id="toy">Click me</button>
+</div>
+
+<script>
+  document.getElementById("toy").addEventListener("click", () => {
+    console.log("Button clicked");
+  });
+
+  document.getElementById("box").addEventListener("click", () => {
+    console.log("Box clicked");
+  });
+
+  document.body.addEventListener("click", () => {
+    console.log("Body clicked");
+  });
+</script>
+
+
+2. EVENT DELEGATION:- Instead of adding event listeners to every child element, you put one listener on the common parent, and use it to handle events from children.
+EXAMPLE:-
+<ul id="teaList">
+  <li class="teaItem">Green Tea</li>
+  <li class="teaItem">Black Tea</li>
+  <li class="teaItem">Oolong Tea</li>
+</ul>
+
+<script>
+  document.getElementById("teaList")
+  .addEventListener("click", function(event) {
+    if (event.target && event.target.matches(".teaItem")) {
+      alert("You selected " + event.target.textContent);
+    }
+  });
+</script>
+
+
 */
