@@ -77,3 +77,9 @@ document.addEventListener("domContentLoaded",function()
 {
     document.getElementById("domStatus").textContent="dom fully loaded";
 });
+
+document.getElementById("toggleHighlight")
+.addEventListener("click",function(){
+    let descriptionText=document.getElementById("descriptionText");
+    descriptionText.classList.toggle("highlight");
+})
