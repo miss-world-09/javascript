@@ -91,3 +91,29 @@ fetchDataWithCallback(function(result) {
 });
 
 
+/* CLOSURE IN JS:- 
+A closure is a function that remembers and can access variables from outside its own scope, even after the outer function has finished executing.
+A closure is when a function “remembers” the environment in which it was created.
+
+EXAMPLE 1:- */
+function outer(){
+    let name="rita";
+    function inner(){
+        console.log("hello"+name);
+    }
+    return inner;
+}
+const greet=outer();
+greet();
+
+//EXAMPLE 2:-
+function outer(){
+    let counter="4"
+    return function(){
+        counter++;
+        return counter;
+    }
+}
+let increment=outer()
+console.log(increment());
+console.log(increment());
