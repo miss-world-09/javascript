@@ -105,3 +105,42 @@ const sayHi = userr.greet.bind(userr);
 sayHi(); 
 
 
+/* call() method:-
+When you want to call a function immediately with a specific this.
+Syntax:- fn.call(thisArg, arg1, arg2).
+Argument Format:- Separate Arguments.
+
+apply() method:-
+Same as call(), but when arguments are in an array
+Syntax:-fn.apply(thisArg, [arg1, arg2])
+Argument Format:- Argument as an array
+
+bind() method:-
+When you want to save a function with this bound, but call it later
+Syntax:-let newFn = fn.bind(thisArg)
+Argument Format:-Arguments can be added later.
+
+*/
+const person1 = { name: "Rita" };
+const person2 = { name: "Tiya" };
+
+function greet(greeting) {
+    console.log(`${greeting}, I am ${this.name}`);
+}
+
+//call():-
+greet.call(person1, "Hello");  // Output: Hello, I am Rita
+greet.call(person2, "Hi");     // Output: Hi, I am Tiya
+
+//apply():-
+greet.apply(person1, ["Hello"]);  // Output: Hello, I am Rita
+greet.apply(person2, ["Hi"]);     // Output: Hi, I am Tiya
+
+//bind():-
+const greetRita = greet.bind(person1, "Hey");
+const greetTiya = greet.bind(person2, "Hola");
+greetRita();  // Output: Hey, I am Rita
+greetTiya();  // Output: Hola, I am Tiya
+
+
+
