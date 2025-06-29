@@ -4,7 +4,7 @@ Error handling in JavaScript means writing code to detect, manage, and respond t
 HOW ERRORS ARE HANDLED IN JAVA:-
 1. Try...Catch Block:- */
 try {
-  // Code that might throw an error
+  // Code that might throw an error.
   let result = someFunction();
 } catch (error) {
   // Handle the error here
