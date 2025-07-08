@@ -52,7 +52,11 @@ const Obj = {
     age: 30
 };
 
-/* NON-PRIMITIVE DATA TYPES:- WE HAVE MAKE THE OBJECTSAND THIS IS HOW IT CAN BE ACCESSED.
+/* Primitive data types:- These are basic data types that store single values.
+ex:-Number,string,boolean,undefined,null,bigInt,symbol.
+
+ NON-PRIMITIVE DATA TYPES:- WE HAVE MAKE THE OBJECTSAND THIS IS HOW IT CAN BE ACCESSED.
+EX:- object,array,function,date,map,set etc. */
 
 const username={
     firstname:"mr h",
@@ -69,5 +73,3 @@ console.log(typeof username);
 let today=new Date();
 console.log(today);
 
-
-*/
