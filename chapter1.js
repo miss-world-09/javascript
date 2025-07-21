@@ -64,6 +64,7 @@ const username={
     isdrunk:"true",
     
 };
+
 username.lastname="sharma";
 console.log(username.firstname);
 console.log(username.lastname);
